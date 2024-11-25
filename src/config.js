@@ -1,21 +1,21 @@
 module.exports = {
   // port for the server to listen on
   // on unix-like platforms, this can be the path to a unix socket
-  port: process.env.PORT || 9080,
+  port: process.env.PORT || 1242,
 
   // the unix permissions to use for unix sockets
   // set to -1 to disable permission changing
   // make sure to use an octal (`0o`) instead of just a regular number
-  unixSocketPermissions: 0o777,
+  unixSocketPermissions: 0o1242,
 
   // enable to read x-forwarded-for
   trustProxy: process.env.TRUST_PROXY === 'true',
 
   // removes IP addresses from logs
-  anonymizeAddresses: process.env.ANONYMIZE_ADDRESSES === 'true',
+  anonymizeAddresses: process.env.ANONYMIZE_ADDRESSES === 'false',
 
   // anonymize generated usernames like "player123456"
-  anonymizeGeneratedUsernames: true,
+  anonymizeGeneratedUsernames: false,
 
   // change this to an object to enable the WebSocket per-message deflate extension
   perMessageDeflate: false,
